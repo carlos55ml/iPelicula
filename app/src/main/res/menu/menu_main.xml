@@ -4,6 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/action_go_to_cinema"
+        android:icon="@drawable/ic_place"
+        android:title="@string/menu_go_to_cinema"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_directions"
+        android:icon="@drawable/ic_directions"
+        android:title="@string/menu_directions"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/action_about"
         android:icon="@drawable/ic_info"
         android:title="@string/menu_about"

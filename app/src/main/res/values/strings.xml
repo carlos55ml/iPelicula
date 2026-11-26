@@ -7,7 +7,15 @@
     <string name="title_about">Acerca de</string>
 
     <!-- Menú de la toolbar -->
+    <string name="menu_go_to_cinema">Ir al cine</string>
+    <string name="menu_directions">Cómo llegar</string>
     <string name="menu_about">Acerca de</string>
+
+    <!-- Mapas y ubicación -->
+    <string name="msg_nearest_cinema">Cine más cercano: %1$s</string>
+    <string name="msg_location_denied">Sin permiso de ubicación no se puede calcular el cine más cercano</string>
+    <string name="msg_location_unknown">No se conoce tu ubicación: se muestra la ruta al cine por defecto</string>
+    <string name="msg_no_maps_app">No hay ninguna aplicación de mapas instalada</string>
 
     <!-- Acerca de -->
     <string name="about_version">Versión %1$s</string>
