@@ -2,23 +2,43 @@ package dev.carlosmoran.ipeliculas;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-public class MainActivity extends AppCompatActivity {
+import dev.carlosmoran.ipeliculas.adapter.MovieAdapter;
+import dev.carlosmoran.ipeliculas.repository.MovieRepository;
+import dev.carlosmoran.ipeliculas.ui.BaseActivity;
+
+/**
+ * Pantalla principal: cartelera con las películas en exhibición.
+ *
+ * @author Carlos Alberto Morán Lozano
+ */
+public class MainActivity extends BaseActivity {
+
+    private RecyclerView rvMovies;
+    private MovieAdapter movieAdapter;
+
+    private final MovieRepository movieRepository = MovieRepository.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        // Pantalla principal: sin flecha de volver
+        setupScreen(R.layout.activity_main, R.string.title_main, false);
+
+        rvMovies = findViewById(R.id.rvMovies);
+        setupMovieList();
+    }
+
+    /**
+     * Configura el RecyclerView con su LayoutManager y el adapter de películas.
+     */
+    private void setupMovieList() {
+        movieAdapter = new MovieAdapter(movieRepository.getAll(), movie -> {
+            // La navegación al detalle se añade con la DetailActivity
         });
+        rvMovies.setLayoutManager(new LinearLayoutManager(this));
+        rvMovies.setAdapter(movieAdapter);
     }
 }
