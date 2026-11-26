@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tablet en horizontal: tres columnas -->
+    <integer name="movie_grid_columns">3</integer>
+</resources>

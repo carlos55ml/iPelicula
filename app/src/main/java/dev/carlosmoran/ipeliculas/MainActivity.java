@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.Map;
@@ -73,7 +73,10 @@ public class MainActivity extends BaseActivity {
             intent.putExtra(DetailActivity.EXTRA_MOVIE_ID, movie.getId());
             startActivity(intent);
         });
-        rvMovies.setLayoutManager(new LinearLayoutManager(this));
+        // Diseño responsivo: el número de columnas depende del tamaño y la orientación
+        // de la pantalla (res/values*/integers.xml). En móvil vertical es 1, como una lista.
+        int columns = getResources().getInteger(R.integer.movie_grid_columns);
+        rvMovies.setLayoutManager(new GridLayoutManager(this, columns));
         rvMovies.setAdapter(movieAdapter);
         // La animación de entrada está definida en el XML (android:layoutAnimation);
         // aquí se lanza explícitamente para que se vea al cargar los elementos
