@@ -25,6 +25,10 @@
             android:name=".ui.DetailActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ui.AboutActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

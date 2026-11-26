@@ -6,6 +6,19 @@
     <string name="title_detail">Detalle</string>
     <string name="title_about">Acerca de</string>
 
+    <!-- Menú de la toolbar -->
+    <string name="menu_about">Acerca de</string>
+
+    <!-- Acerca de -->
+    <string name="about_version">Versión %1$s</string>
+    <string name="about_description">Aplicación desarrollada por Carlos Alberto Morán Lozano. Versión %1$s.\n\nCartelera de cine con las películas en exhibición, su ficha completa y acceso rápido al cine más cercano en Google Maps.</string>
+    <string name="about_developer_label">Desarrollador</string>
+    <string name="about_developer_name" translatable="false">Carlos Alberto Morán Lozano</string>
+    <string name="about_course_label">Módulo</string>
+    <string name="about_course">Programación Multimedia y Dispositivos Móviles · 2º DAM</string>
+    <string name="about_web_label">Web</string>
+    <string name="about_web" translatable="false">https://carlosmoran.dev</string>
+
     <!-- Detalle -->
     <string name="detail_info">Ficha</string>
     <string name="detail_director">Director</string>

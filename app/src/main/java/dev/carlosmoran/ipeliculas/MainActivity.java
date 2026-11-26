@@ -2,12 +2,16 @@ package dev.carlosmoran.ipeliculas;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import dev.carlosmoran.ipeliculas.adapter.MovieAdapter;
 import dev.carlosmoran.ipeliculas.repository.MovieRepository;
+import dev.carlosmoran.ipeliculas.ui.AboutActivity;
 import dev.carlosmoran.ipeliculas.ui.BaseActivity;
 import dev.carlosmoran.ipeliculas.ui.DetailActivity;
 
@@ -48,5 +52,27 @@ public class MainActivity extends BaseActivity {
         // La animación de entrada está definida en el XML (android:layoutAnimation);
         // aquí se lanza explícitamente para que se vea al cargar los elementos
         rvMovies.scheduleLayoutAnimation();
+    }
+
+    /**
+     * Infla el menú de la toolbar (Acerca de).
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    /**
+     * Gestiona las opciones del menú de la toolbar.
+     */
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        if (itemId == R.id.action_about) {
+            startActivity(new Intent(this, AboutActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
