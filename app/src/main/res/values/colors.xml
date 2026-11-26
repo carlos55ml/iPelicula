@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Géneros (MovieGenre) -->
+    <color name="genre_action">#FFE53935</color>
+    <color name="genre_sci_fi">#FF29B6F6</color>
+    <color name="genre_drama">#FFAB47BC</color>
+    <color name="genre_comedy">#FFFFCA28</color>
+    <color name="genre_animation">#FF66BB6A</color>
+    <color name="genre_horror">#FF8D6E63</color>
+    <color name="genre_fantasy">#FFEC407A</color>
 </resources>

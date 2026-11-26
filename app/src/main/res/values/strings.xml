@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">iPeliculas</string>
+
+    <!-- Géneros (MovieGenre) -->
+    <string name="genre_action">Acción</string>
+    <string name="genre_sci_fi">Ciencia ficción</string>
+    <string name="genre_drama">Drama</string>
+    <string name="genre_comedy">Comedia</string>
+    <string name="genre_animation">Animación</string>
+    <string name="genre_horror">Terror</string>
+    <string name="genre_fantasy">Fantasía</string>
 </resources>
