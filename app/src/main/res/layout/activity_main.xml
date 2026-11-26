@@ -9,8 +9,8 @@
     android:background="@color/background"
     tools:context=".MainActivity">
 
+    <!-- Sin android:id en el include: si lo tuviera, sustituiría al id "toolbar" del layout incluido -->
     <include
-        android:id="@+id/toolbarContainer"
         layout="@layout/toolbar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbarContainer"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         tools:listitem="@layout/item_movie" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
