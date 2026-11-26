@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">iPeliculas</string>
 
+    <!-- Títulos de pantalla -->
+    <string name="title_main">Cartelera de Cine</string>
+    <string name="title_detail">Detalle</string>
+    <string name="title_about">Acerca de</string>
+
     <!-- Géneros (MovieGenre) -->
     <string name="genre_action">Acción</string>
     <string name="genre_sci_fi">Ciencia ficción</string>

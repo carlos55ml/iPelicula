@@ -3,6 +3,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- Paleta cinematográfica: tonos oscuros con detalles dorados y rojos -->
+    <color name="background">#FF0E0E10</color>      <!-- fondo de sala -->
+    <color name="surface">#FF1C1C21</color>         <!-- tarjetas -->
+    <color name="toolbar">#FF15151A</color>
+    <color name="gold">#FFD4AF37</color>            <!-- dorado (acento principal) -->
+    <color name="gold_dark">#FF9C7F1F</color>
+    <color name="red">#FFB3122B</color>             <!-- rojo butaca (acento secundario) -->
+    <color name="text_primary">#FFF5F5F5</color>
+    <color name="text_secondary">#FFB0B0B8</color>
+    <color name="divider">#33FFFFFF</color>
+
     <!-- Géneros (MovieGenre) -->
     <color name="genre_action">#FFE53935</color>
     <color name="genre_sci_fi">#FF29B6F6</color>
