@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Animación de cada tarjeta: entra deslizándose desde abajo mientras aparece gradualmente.
+    La desaceleración hace que frene suavemente al llegar a su sitio.
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="500"
+    android:interpolator="@android:anim/decelerate_interpolator">
+
+    <translate
+        android:fromYDelta="40%"
+        android:toYDelta="0" />
+
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1" />
+
+    <scale
+        android:fromXScale="0.95"
+        android:fromYScale="0.95"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toXScale="1"
+        android:toYScale="1" />
+</set>

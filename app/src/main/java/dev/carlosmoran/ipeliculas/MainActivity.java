@@ -40,5 +40,8 @@ public class MainActivity extends BaseActivity {
         });
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
         rvMovies.setAdapter(movieAdapter);
+        // La animación de entrada está definida en el XML (android:layoutAnimation);
+        // aquí se lanza explícitamente para que se vea al cargar los elementos
+        rvMovies.scheduleLayoutAnimation();
     }
 }
