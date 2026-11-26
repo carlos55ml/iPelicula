@@ -1,5 +1,6 @@
 package dev.carlosmoran.ipeliculas;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import dev.carlosmoran.ipeliculas.adapter.MovieAdapter;
 import dev.carlosmoran.ipeliculas.repository.MovieRepository;
 import dev.carlosmoran.ipeliculas.ui.BaseActivity;
+import dev.carlosmoran.ipeliculas.ui.DetailActivity;
 
 /**
  * Pantalla principal: cartelera con las películas en exhibición.
@@ -35,8 +37,11 @@ public class MainActivity extends BaseActivity {
      * Configura el RecyclerView con su LayoutManager y el adapter de películas.
      */
     private void setupMovieList() {
+        // Al pulsar una película se abre su detalle pasando el id por el Intent
         movieAdapter = new MovieAdapter(movieRepository.getAll(), movie -> {
-            // La navegación al detalle se añade con la DetailActivity
+            Intent intent = new Intent(this, DetailActivity.class);
+            intent.putExtra(DetailActivity.EXTRA_MOVIE_ID, movie.getId());
+            startActivity(intent);
         });
         rvMovies.setLayoutManager(new LinearLayoutManager(this));
         rvMovies.setAdapter(movieAdapter);

@@ -16,9 +16,24 @@
 
     <style name="Theme.IPeliculas" parent="Base.Theme.IPeliculas" />
 
-    <!-- Estrellas doradas de solo lectura para las RatingBar -->
-    <style name="Widget.IPeliculas.RatingBar" parent="Widget.AppCompat.RatingBar.Small">
-        <item name="colorControlActivated">@color/gold</item>
-        <item name="colorControlNormal">@color/text_secondary</item>
+    <!-- Textos de la pantalla de detalle -->
+    <style name="TextAppearance.IPeliculas.SectionTitle" parent="">
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:textColor">@color/gold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.IPeliculas.Label" parent="">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextAppearance.IPeliculas.Value" parent="">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>

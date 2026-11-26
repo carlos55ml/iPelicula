@@ -6,6 +6,16 @@
     <string name="title_detail">Detalle</string>
     <string name="title_about">Acerca de</string>
 
+    <!-- Detalle -->
+    <string name="detail_info">Ficha</string>
+    <string name="detail_director">Director</string>
+    <string name="detail_release_date">Fecha de estreno</string>
+    <string name="detail_duration">Duración</string>
+    <string name="detail_synopsis">Sinopsis</string>
+    <string name="detail_rating_value">%1$.1f / 5</string>
+    <string name="detail_duration_value">%1$d min</string>
+    <string name="msg_movie_not_found">No se ha encontrado la película</string>
+
     <!-- Géneros (MovieGenre) -->
     <string name="genre_action">Acción</string>
     <string name="genre_sci_fi">Ciencia ficción</string>
